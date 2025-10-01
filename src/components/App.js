@@ -20,13 +20,15 @@ const App = () => {
   ])
   //console.log(todos)
 
-  function handleComplete(index)
-  {
-      let temp = [...todos]
-      temp[index].isComplete = true
-      setTodos(temp)
-  }
-  
+ function handleComplete(index) {
+  let temp = [...todos];
+  temp[index] = { 
+    ...temp[index],   // copy existing todo
+    isComplete: true  // set isComplete
+  };
+  setTodos(temp);
+}
+ 
 
 
   return (
