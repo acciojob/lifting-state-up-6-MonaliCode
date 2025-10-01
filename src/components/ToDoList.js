@@ -3,7 +3,7 @@ import React from 'react'
 const ToDoList = ({todos, setTodos, handleComplete}) => {
   return (
     <div>
-        <h1>Child Component</h1>
+        <h2>Child Component</h2>
         <ul>
             {todos.map((item, index)=>{
                 return <li>{item.text}{!item.isComplete && <button onClick={() => {
